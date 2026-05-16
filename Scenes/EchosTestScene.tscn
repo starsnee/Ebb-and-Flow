@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://xfqhyxm4k18t"]
+
+[ext_resource type="PackedScene" uid="uid://b8v0pell8ac3d" path="res://Scenes/PlayerCharacter.tscn" id="1_uej8p"]
+[ext_resource type="PackedScene" uid="uid://cayrft4638r00" path="res://Scenes/TestObjects/TestStationarySprite.tscn" id="2_7wf5e"]
+
+[node name="Node2D" type="Node2D" unique_id=871110545]
+
+[node name="Player" parent="." unique_id=1323018949 instance=ExtResource("1_uej8p")]
+position = Vector2(578, 324)
+motion_mode = 1
+
+[node name="Node2D" parent="." unique_id=1005269904 instance=ExtResource("2_7wf5e")]
+position = Vector2(755, 457)
