@@ -2,8 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bunlxotd55xew" path="res://Scenes/PlayerCharacter.cs" id="1_5gnj7"]
 [ext_resource type="Texture2D" uid="uid://hmnh6buyvjll" path="res://icon.svg" id="2_5gnj7"]
+[ext_resource type="Script" uid="uid://c433h5qywk77" path="res://Scenes/PlayerLight.cs" id="3_2getf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7sut"]
+
+[sub_resource type="Gradient" id="Gradient_2getf"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mdaju"]
+gradient = SubResource("Gradient_2getf")
+fill = 1
+fill_from = Vector2(0.49130434, 0.49130434)
+fill_to = Vector2(0.12608695, 0.16521738)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1323018949]
 script = ExtResource("1_5gnj7")
@@ -17,3 +27,11 @@ texture = ExtResource("2_5gnj7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1183324032]
 shape = SubResource("RectangleShape2D_v7sut")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1596567955]
+position = Vector2(-1, 0)
+scale = Vector2(3.15625, 3.3125)
+color = Color(1, 1, 0.68235296, 1)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_mdaju")
+script = ExtResource("3_2getf")
