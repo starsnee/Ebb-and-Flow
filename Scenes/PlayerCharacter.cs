@@ -130,7 +130,7 @@ public partial class PlayerCharacter : CharacterBody2D
     public void TakeDamage(float damageTaken)
     {
         currentHealth -= damageTaken;
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             BeginDeath();
         }
