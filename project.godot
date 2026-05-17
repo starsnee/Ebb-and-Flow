@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="Ebb and Flow"
 
+[global_group]
+
+Player="For the player object only. Only add one node to this"
+
 [input]
 
 ui_left={
