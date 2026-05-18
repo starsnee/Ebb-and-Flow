@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Threading.Tasks;
 
 
 //Echo note - this file has a lot of commented out code, that's default code kept for reference only
@@ -17,7 +18,7 @@ public partial class PlayerCharacter : CharacterBody2D
 
     private float currentHealth;
     private bool isAlive = true;
-
+    private int sacredItemCount = 0;
 
 
 
@@ -76,7 +77,7 @@ public partial class PlayerCharacter : CharacterBody2D
             velocity = velocity.Lerp(Vector2.Zero, DragForce);
             acceleration = Vector2.Zero;
             acceleration.Y = DeathFloatSpeed * DragForce;
-            velocity.Y -= DeathFloatSpeed * (float)delta;
+            velocity.Y += DeathFloatSpeed * (float)delta;
             Velocity = velocity;
             MoveAndSlide();
             return;
@@ -145,9 +146,25 @@ public partial class PlayerCharacter : CharacterBody2D
     }
 
 
-    private void Die()
+    private async Task Die()
     {
+        await Task.Delay(5000);
+        GetTree().ReloadCurrentScene();
         //Reckon this is where a restart screen would go initialized
+    }
+
+    public void ObtainSacredItem()
+    {
+        sacredItemCount++;
+        if (sacredItemCount == 3)
+        {
+            PlayerWins();
+        }
+    }
+
+    private void PlayerWins()
+    {
+        //AddTheWins
     }
 }
 

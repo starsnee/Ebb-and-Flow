@@ -13,6 +13,7 @@ public partial class PlayerLight : PointLight2D
 	{
         LightDepthMin = GetParent<CharacterBody2D>().GlobalPosition.Y;
         LightDepthMax += GetParent<CharacterBody2D>().GlobalPosition.Y;
+        Enabled = false;
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
