@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://djw6g8ffxy8la"]
+
+[ext_resource type="Script" path="res://StreamScript.cs" id="1_d6fdq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nrj4w"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_d6fdq"]
+
+[node name="Area2D" type="Area2D" unique_id=198752691]
+script = ExtResource("1_d6fdq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1364434303]
+shape = SubResource("RectangleShape2D_nrj4w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1234982485]
+scale = Vector2(20, 20)
+texture = SubResource("PlaceholderTexture2D_d6fdq")

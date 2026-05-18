@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c1qv5ho2ketm3"]
+
+[ext_resource type="Script" uid="uid://bjjhpmpmbwr6l" path="res://Scripts/SacredItem.cs" id="1_1gm1e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pv32d"]
+
+[node name="Area2D" type="Area2D" unique_id=612785393]
+script = ExtResource("1_1gm1e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=133534347]
+shape = SubResource("RectangleShape2D_pv32d")
+script = ExtResource("1_1gm1e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1870167258]
