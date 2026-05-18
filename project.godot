@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Ebb and Flow"
-run/main_scene="uid://xfqhyxm4k18t"
+run/main_scene="uid://c5wp54n1r8d6t"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
