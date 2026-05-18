@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b8v0pell8ac3d" path="res://Scenes/PlayerCharacter.tscn" id="1_uej8p"]
 [ext_resource type="PackedScene" uid="uid://cayrft4638r00" path="res://Scenes/TestObjects/TestStationarySprite.tscn" id="2_7wf5e"]
 [ext_resource type="PackedScene" uid="uid://bmnrdeemqucto" path="res://Scenes/Enemies/Shark.tscn" id="3_ximmi"]
+[ext_resource type="PackedScene" uid="uid://djw6g8ffxy8la" path="res://Scenes/Stream.tscn" id="4_l6p7t"]
 
 [node name="Node2D" type="Node2D" unique_id=871110545]
 
@@ -15,3 +16,6 @@ position = Vector2(755, 457)
 
 [node name="CharacterBody2D" parent="." unique_id=1811486685 instance=ExtResource("3_ximmi")]
 position = Vector2(1058, 104)
+
+[node name="Area2D" parent="." unique_id=198752691 instance=ExtResource("4_l6p7t")]
+position = Vector2(189, 340)
